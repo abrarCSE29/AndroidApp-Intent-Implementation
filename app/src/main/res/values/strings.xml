@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">App with spinner</string>
+    <string name="easybuy">EasyBuy</string>
+    <string name="select_product">Select Product</string>
+    <string name="selected_item">Selected Item</string>
+    <string name="electronics">Electronics</string>
+    <string name="food_and_beverage">Food and beverage</string>
+    <string name="place_order">Place Order</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string-array name="categories">
+        <item>Select</item>
+        <item>Electronics</item>
+        <item>Food and Beverage</item>
+        <item>Gifts</item>
+        <item>Cloths</item>
+    </string-array>
+</resources>
