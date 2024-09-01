@@ -1,5 +1,6 @@
 package com.example.appwithspinner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -59,7 +60,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void orderConfirm(View view) {
-        TextView orderConfirmText = findViewById(R.id.orderConfirmationText);
-        orderConfirmText.setText(R.string.order_confirmed);
+        // Retrieve selected category and product
+        Spinner categorySpinner = findViewById(R.id.categorySpinner);
+        Spinner productSpinner = findViewById(R.id.productSpinner);
+
+        String selectedCategory = categorySpinner.getSelectedItem().toString();
+        String selectedProduct = productSpinner.getSelectedItem().toString();
+
+        // Create an Intent to start CustomerDetailsActivity
+        Intent intent = new Intent(MainActivity.this, CustomerDetailsActivity.class);
+        intent.putExtra("selectedCategory", selectedCategory);
+        intent.putExtra("selectedProduct", selectedProduct);
+
+        // Start CustomerDetailsActivity
+        startActivity(intent);
     }
 }
